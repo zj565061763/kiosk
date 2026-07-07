@@ -25,7 +25,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".NewActivity" />
+        <activity
+            android:name=".NewActivity"
+            android:lockTaskMode="if_whitelisted" />
 
     </application>
 
