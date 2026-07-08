@@ -2,6 +2,12 @@
 <resources>
 
     <style name="Theme.App" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="Theme.App.Launch" parent="Theme.App">
+        <item name="android:windowDisablePreview">false</item>
         <item name="android:windowBackground">@drawable/bg</item>
     </style>
 </resources>
