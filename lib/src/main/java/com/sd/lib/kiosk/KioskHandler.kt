@@ -56,13 +56,7 @@ object KioskHandler {
     }
   }
 
-  fun setEnabled(enabled: Boolean, activity: Activity): Throwable? {
-    return runCatching {
-      setEnabledInternal(enabled, activity)
-    }.exceptionOrNull()
-  }
-
-  private fun setEnabledInternal(enabled: Boolean, activity: Activity) {
+  fun setEnabled(enabled: Boolean, activity: Activity) {
     if (!isDeviceOwner()) return
     val admin = ComponentName(_context, KioskDeviceAdminReceiver::class.java)
     if (enabled) {
