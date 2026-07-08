@@ -56,10 +56,10 @@ object KioskHandler {
     }
   }
 
-  fun setEnabled(enabled: Boolean, activity: Activity) {
-    activity.runOnUiThread {
+  fun setEnabled(enabled: Boolean, activity: Activity): Throwable? {
+    return runCatching {
       setEnabledInternal(enabled, activity)
-    }
+    }.exceptionOrNull()
   }
 
   private fun setEnabledInternal(enabled: Boolean, activity: Activity) {
