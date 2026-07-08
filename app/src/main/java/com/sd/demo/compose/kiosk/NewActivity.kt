@@ -1,6 +1,7 @@
 package com.sd.demo.compose.kiosk
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,6 +12,7 @@ import com.sd.demo.compose.kiosk.theme.AppTheme
 class NewActivity : BaseActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+    Toast.makeText(this, "NewActivity", Toast.LENGTH_SHORT).show()
     setPageContent {
       AppTheme {
         Column(
